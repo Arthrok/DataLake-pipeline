@@ -1,0 +1,19 @@
+[2024-05-06T15:55:40.759+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-06T15:55:40.937+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: data_validation_dag_v2.validate_records scheduled__2024-05-06T14:01:00+00:00 [queued]>
+[2024-05-06T15:55:40.947+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: data_validation_dag_v2.validate_records scheduled__2024-05-06T14:01:00+00:00 [queued]>
+[2024-05-06T15:55:40.948+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2024-05-06T15:55:40.963+0000] {taskinstance.py:2327} INFO - Executing <Task(_PythonDecoratedOperator): validate_records> on 2024-05-06 14:01:00+00:00
+[2024-05-06T15:55:40.970+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'data_validation_dag_v2', 'validate_records', 'scheduled__2024-05-06T14:01:00+00:00', '--job-id', '89', '--raw', '--subdir', 'DAGS_FOLDER/***-dags/datalake/data_validation_dag.py', '--cfg-path', '/tmp/tmpau6ufb54']
+[2024-05-06T15:55:40.973+0000] {standard_task_runner.py:91} INFO - Job 89: Subtask validate_records
+[2024-05-06T15:55:40.973+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=183) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-05-06T15:55:40.974+0000] {standard_task_runner.py:63} INFO - Started process 187 to run task
+[2024-05-06T15:55:41.037+0000] {task_command.py:426} INFO - Running <TaskInstance: data_validation_dag_v2.validate_records scheduled__2024-05-06T14:01:00+00:00 [running]> on host 7e66cf85c990
+[2024-05-06T15:55:41.169+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data_team' AIRFLOW_CTX_DAG_ID='data_validation_dag_v2' AIRFLOW_CTX_TASK_ID='validate_records' AIRFLOW_CTX_EXECUTION_DATE='2024-05-06T14:01:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-05-06T14:01:00+00:00'
+[2024-05-06T15:55:41.170+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-06T15:55:41.171+0000] {logging_mixin.py:188} INFO - Record count is invalid.
+[2024-05-06T15:55:41.172+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-05-06T15:55:41.172+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-06T15:55:41.184+0000] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=data_validation_dag_v2, task_id=validate_records, execution_date=20240506T140100, start_date=20240506T155540, end_date=20240506T155541
+[2024-05-06T15:55:41.228+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-05-06T15:55:41.247+0000] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-05-06T15:55:41.249+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

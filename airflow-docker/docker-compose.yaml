@@ -9,9 +9,10 @@ x-airflow-common:
   build:
     context: ..
     dockerfile: airflow-docker/dockerfile
-    target: airflow-local
+    # target: airflow-local
   environment:
     &airflow-common-env
+    AIRFLOW__CORE__DAGBAG_IMPORT_TIMEOUT: 1800.0
     AIRFLOW__CORE__DEFAULT_TIMEZONE: 'America/Sao_Paulo'
     AIRFLOW__WEBSERVER__DEFAULT_UI_TIMEZONE: 'America/Sao_Paulo'
     AIRFLOW__CORE__ENABLE_XCOM_PICKLING: 'true'
@@ -22,6 +23,7 @@ x-airflow-common:
     AIRFLOW__CORE__FERNET_KEY: ''
     AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'true'
     AIRFLOW__API__AUTH_BACKENDS: 'airflow.api.auth.backend.basic_auth,airflow.api.auth.backend.session'
+    # PYTHONPATH: '/opt/airflow/dags/airflow-dags/datalake/selenium_scripts'
     # yamllint disable rule:line-length
     # Use simple http server on scheduler for health checks
     # See https://airflow.apache.org/docs/apache-airflow/stable/administration-and-deployment/logging-monitoring/check-health.html#scheduler-health-check-server
@@ -45,6 +47,13 @@ x-airflow-common:
       condition: service_healthy
 
 services:
+  selenium:
+    container_name: remote_chromedriver
+    image: seleniarm/standalone-chromium:latest
+    ports:
+      - 4444:4444
+    restart: always
+    
   postgres:
     image: postgres:15
     environment:
