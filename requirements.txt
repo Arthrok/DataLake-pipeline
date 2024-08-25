@@ -2,6 +2,8 @@ apache-airflow-providers-telegram
 apache-airflow-providers-smtp
 apache-airflow-providers-postgres
 apache-airflow-providers-amazon
+apache-airflow-providers-cncf-kubernetes
+
 
 apache-airflow-providers-jdbc
 apache-airflow-providers-google
