@@ -47,7 +47,7 @@ x-airflow-common:
     postgres:
       condition: service_healthy
 
-services:  
+services:    
   postgres:
     image: postgres:15
     environment:
