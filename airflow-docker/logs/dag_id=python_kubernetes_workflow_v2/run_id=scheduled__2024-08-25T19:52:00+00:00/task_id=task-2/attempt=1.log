@@ -1,0 +1,28 @@
+[2024-08-25T19:54:00.978+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-08-25T19:54:00.994+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: python_kubernetes_workflow_v2.task-2 scheduled__2024-08-25T19:52:00+00:00 [queued]>
+[2024-08-25T19:54:01.001+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: python_kubernetes_workflow_v2.task-2 scheduled__2024-08-25T19:52:00+00:00 [queued]>
+[2024-08-25T19:54:01.002+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2024-08-25T19:54:01.140+0000] {taskinstance.py:2327} INFO - Executing <Task(KubernetesPodOperator): task-2> on 2024-08-25 19:52:00+00:00
+[2024-08-25T19:54:01.150+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=1182) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-08-25T19:54:01.151+0000] {standard_task_runner.py:63} INFO - Started process 1183 to run task
+[2024-08-25T19:54:01.150+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'python_kubernetes_workflow_v2', 'task-2', 'scheduled__2024-08-25T19:52:00+00:00', '--job-id', '23', '--raw', '--subdir', 'DAGS_FOLDER/***-dags/testedag.py', '--cfg-path', '/tmp/tmpjcku4zi9']
+[2024-08-25T19:54:01.151+0000] {standard_task_runner.py:91} INFO - Job 23: Subtask task-2
+[2024-08-25T19:54:01.196+0000] {task_command.py:426} INFO - Running <TaskInstance: python_kubernetes_workflow_v2.task-2 scheduled__2024-08-25T19:52:00+00:00 [running]> on host 3547c55a8384
+[2024-08-25T19:54:01.279+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='***@example.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='python_kubernetes_workflow_v2' AIRFLOW_CTX_TASK_ID='task-2' AIRFLOW_CTX_EXECUTION_DATE='2024-08-25T19:52:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-08-25T19:52:00+00:00'
+[2024-08-25T19:54:01.280+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-08-25T19:54:01.284+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/providers/cncf/kubernetes/operators/pod.py:1038 AirflowProviderDeprecationWarning: This function is deprecated. Please use `add_unique_suffix`.
+[2024-08-25T19:54:01.285+0000] {pod.py:1057} INFO - Building pod task-2-824xsh2v with labels: {'dag_id': 'python_kubernetes_workflow_v2', 'task_id': 'task-2', 'run_id': 'scheduled__2024-08-25T1952000000-5e4f0257c', 'kubernetes_pod_operator': 'True', 'try_number': '1'}
+[2024-08-25T19:54:02.557+0000] {pod.py:526} INFO - Found matching pod task-2-824xsh2v with labels {'airflow_kpo_in_cluster': 'False', 'airflow_version': '2.9.0', 'dag_id': 'python_kubernetes_workflow_v2', 'foo': 'bar', 'kubernetes_pod_operator': 'True', 'run_id': 'scheduled__2024-08-25T1952000000-5e4f0257c', 'task_id': 'task-2', 'try_number': '1'}
+[2024-08-25T19:54:02.557+0000] {pod.py:527} INFO - `try_number` of task_instance: 1
+[2024-08-25T19:54:02.557+0000] {pod.py:528} INFO - `try_number` of pod: 1
+[2024-08-25T19:54:02.723+0000] {pod_manager.py:373} WARNING - Pod not yet started: task-2-824xsh2v
+[2024-08-25T19:54:03.936+0000] {pod_manager.py:373} WARNING - Pod not yet started: task-2-824xsh2v
+[2024-08-25T19:54:05.169+0000] {pod_manager.py:373} WARNING - Pod not yet started: task-2-824xsh2v
+[2024-08-25T19:54:07.521+0000] {pod_manager.py:483} INFO - [base] hello task 2 ..................
+
+[2024-08-25T19:54:08.340+0000] {pod.py:911} INFO - Deleting pod: task-2-824xsh2v
+[2024-08-25T19:54:08.540+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-08-25T19:54:08.557+0000] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=python_kubernetes_workflow_v2, task_id=task-2, execution_date=20240825T195200, start_date=20240825T195400, end_date=20240825T195408
+[2024-08-25T19:54:08.582+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-08-25T19:54:08.599+0000] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-08-25T19:54:08.601+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

@@ -1,0 +1,36 @@
+[2024-08-25T19:35:01.425+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-08-25T19:35:01.442+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: python_kubernetes_workflow_v2.task-1 scheduled__2024-08-25T19:34:00+00:00 [queued]>
+[2024-08-25T19:35:01.450+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: python_kubernetes_workflow_v2.task-1 scheduled__2024-08-25T19:34:00+00:00 [queued]>
+[2024-08-25T19:35:01.450+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2024-08-25T19:35:01.587+0000] {taskinstance.py:2327} INFO - Executing <Task(KubernetesPodOperator): task-1> on 2024-08-25 19:34:00+00:00
+[2024-08-25T19:35:01.596+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=287) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-08-25T19:35:01.597+0000] {standard_task_runner.py:63} INFO - Started process 290 to run task
+[2024-08-25T19:35:01.596+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'python_kubernetes_workflow_v2', 'task-1', 'scheduled__2024-08-25T19:34:00+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/***-dags/testedag.py', '--cfg-path', '/tmp/tmpaycc6e99']
+[2024-08-25T19:35:01.598+0000] {standard_task_runner.py:91} INFO - Job 7: Subtask task-1
+[2024-08-25T19:35:01.645+0000] {task_command.py:426} INFO - Running <TaskInstance: python_kubernetes_workflow_v2.task-1 scheduled__2024-08-25T19:34:00+00:00 [running]> on host 3547c55a8384
+[2024-08-25T19:35:01.746+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='***@example.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='python_kubernetes_workflow_v2' AIRFLOW_CTX_TASK_ID='task-1' AIRFLOW_CTX_EXECUTION_DATE='2024-08-25T19:34:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-08-25T19:34:00+00:00'
+[2024-08-25T19:35:01.747+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-08-25T19:35:01.756+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/providers/cncf/kubernetes/operators/pod.py:1038 AirflowProviderDeprecationWarning: This function is deprecated. Please use `add_unique_suffix`.
+[2024-08-25T19:35:01.759+0000] {pod.py:1057} INFO - Building pod task-1-lsl5t3mm with labels: {'dag_id': 'python_kubernetes_workflow_v2', 'task_id': 'task-1', 'run_id': 'scheduled__2024-08-25T1934000000-4b0bbb43c', 'kubernetes_pod_operator': 'True', 'try_number': '1'}
+[2024-08-25T19:35:02.766+0000] {pod.py:526} INFO - Found matching pod task-1-lsl5t3mm with labels {'airflow_kpo_in_cluster': 'False', 'airflow_version': '2.9.0', 'dag_id': 'python_kubernetes_workflow_v2', 'foo': 'bar', 'kubernetes_pod_operator': 'True', 'run_id': 'scheduled__2024-08-25T1934000000-4b0bbb43c', 'task_id': 'task-1', 'try_number': '1'}
+[2024-08-25T19:35:02.766+0000] {pod.py:527} INFO - `try_number` of task_instance: 1
+[2024-08-25T19:35:02.766+0000] {pod.py:528} INFO - `try_number` of pod: 1
+[2024-08-25T19:35:02.938+0000] {pod_manager.py:373} WARNING - Pod not yet started: task-1-lsl5t3mm
+[2024-08-25T19:35:04.121+0000] {pod_manager.py:373} WARNING - Pod not yet started: task-1-lsl5t3mm
+[2024-08-25T19:35:05.356+0000] {pod_manager.py:373} WARNING - Pod not yet started: task-1-lsl5t3mm
+[2024-08-25T19:35:06.581+0000] {pod_manager.py:373} WARNING - Pod not yet started: task-1-lsl5t3mm
+[2024-08-25T19:35:07.809+0000] {pod_manager.py:373} WARNING - Pod not yet started: task-1-lsl5t3mm
+[2024-08-25T19:35:08.979+0000] {pod_manager.py:373} WARNING - Pod not yet started: task-1-lsl5t3mm
+[2024-08-25T19:35:10.166+0000] {pod_manager.py:373} WARNING - Pod not yet started: task-1-lsl5t3mm
+[2024-08-25T19:35:11.394+0000] {pod_manager.py:373} WARNING - Pod not yet started: task-1-lsl5t3mm
+[2024-08-25T19:35:12.628+0000] {pod_manager.py:373} WARNING - Pod not yet started: task-1-lsl5t3mm
+[2024-08-25T19:35:13.847+0000] {pod_manager.py:373} WARNING - Pod not yet started: task-1-lsl5t3mm
+[2024-08-25T19:35:15.083+0000] {pod_manager.py:373} WARNING - Pod not yet started: task-1-lsl5t3mm
+[2024-08-25T19:35:16.308+0000] {pod_manager.py:373} WARNING - Pod not yet started: task-1-lsl5t3mm
+[2024-08-25T19:35:16.723+0000] {local_task_job_runner.py:310} WARNING - State of this instance has been externally set to removed. Terminating instance.
+[2024-08-25T19:35:16.724+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2024-08-25T19:35:16.729+0000] {process_utils.py:132} INFO - Sending 15 to group 290. PIDs of all processes in the group: [290]
+[2024-08-25T19:35:16.729+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 290
+[2024-08-25T19:35:16.730+0000] {taskinstance.py:2607} ERROR - Received SIGTERM. Terminating subprocesses.
+[2024-08-25T19:35:16.925+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-08-25T19:35:16.983+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=290, status='terminated', exitcode=0, started='19:35:01') (290) terminated with exit code 0

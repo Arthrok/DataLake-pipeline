@@ -1,0 +1,27 @@
+[2024-08-25T19:34:00.827+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-08-25T19:34:00.841+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: python_kubernetes_workflow_v2.task-2 scheduled__2024-08-25T19:33:00+00:00 [queued]>
+[2024-08-25T19:34:00.848+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: python_kubernetes_workflow_v2.task-2 scheduled__2024-08-25T19:33:00+00:00 [queued]>
+[2024-08-25T19:34:00.848+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2024-08-25T19:34:00.984+0000] {taskinstance.py:2327} INFO - Executing <Task(KubernetesPodOperator): task-2> on 2024-08-25 19:33:00+00:00
+[2024-08-25T19:34:00.993+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=237) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-08-25T19:34:00.994+0000] {standard_task_runner.py:63} INFO - Started process 239 to run task
+[2024-08-25T19:34:00.993+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'python_kubernetes_workflow_v2', 'task-2', 'scheduled__2024-08-25T19:33:00+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/***-dags/testedag.py', '--cfg-path', '/tmp/tmp7q5b2fl9']
+[2024-08-25T19:34:00.995+0000] {standard_task_runner.py:91} INFO - Job 5: Subtask task-2
+[2024-08-25T19:34:01.041+0000] {task_command.py:426} INFO - Running <TaskInstance: python_kubernetes_workflow_v2.task-2 scheduled__2024-08-25T19:33:00+00:00 [running]> on host 3547c55a8384
+[2024-08-25T19:34:01.128+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='***@example.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='python_kubernetes_workflow_v2' AIRFLOW_CTX_TASK_ID='task-2' AIRFLOW_CTX_EXECUTION_DATE='2024-08-25T19:33:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-08-25T19:33:00+00:00'
+[2024-08-25T19:34:01.129+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-08-25T19:34:01.133+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/providers/cncf/kubernetes/operators/pod.py:1038 AirflowProviderDeprecationWarning: This function is deprecated. Please use `add_unique_suffix`.
+[2024-08-25T19:34:01.134+0000] {pod.py:1057} INFO - Building pod task-2-pr62rpq1 with labels: {'dag_id': 'python_kubernetes_workflow_v2', 'task_id': 'task-2', 'run_id': 'scheduled__2024-08-25T1933000000-e58258798', 'kubernetes_pod_operator': 'True', 'try_number': '1'}
+[2024-08-25T19:34:02.277+0000] {pod.py:526} INFO - Found matching pod task-2-pr62rpq1 with labels {'airflow_kpo_in_cluster': 'False', 'airflow_version': '2.9.0', 'dag_id': 'python_kubernetes_workflow_v2', 'foo': 'bar', 'kubernetes_pod_operator': 'True', 'run_id': 'scheduled__2024-08-25T1933000000-e58258798', 'task_id': 'task-2', 'try_number': '1'}
+[2024-08-25T19:34:02.277+0000] {pod.py:527} INFO - `try_number` of task_instance: 1
+[2024-08-25T19:34:02.277+0000] {pod.py:528} INFO - `try_number` of pod: 1
+[2024-08-25T19:34:02.482+0000] {pod_manager.py:373} WARNING - Pod not yet started: task-2-pr62rpq1
+[2024-08-25T19:34:03.711+0000] {pod_manager.py:373} WARNING - Pod not yet started: task-2-pr62rpq1
+[2024-08-25T19:34:05.953+0000] {pod_manager.py:483} INFO - [base] hello task 2 ..................
+
+[2024-08-25T19:34:06.779+0000] {pod.py:911} INFO - Deleting pod: task-2-pr62rpq1
+[2024-08-25T19:34:06.983+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-08-25T19:34:06.994+0000] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=python_kubernetes_workflow_v2, task_id=task-2, execution_date=20240825T193300, start_date=20240825T193400, end_date=20240825T193406
+[2024-08-25T19:34:07.015+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-08-25T19:34:07.030+0000] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-08-25T19:34:07.032+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
